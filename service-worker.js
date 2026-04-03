@@ -37,14 +37,14 @@ function blobToBase64(blob) {
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: "analyze-image",
-    title: "Analyze image",
+    id: "glowing-monocle",
+    title: "Glowing Monocle",
     contexts: ["image"]
   });
 });
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId !== "analyze-image") return;
+  if (info.menuItemId !== "glowing-monocle") return;
   if (!tab?.id) return;
 
   const imageUrl = info.srcUrl;

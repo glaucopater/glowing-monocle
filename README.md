@@ -37,3 +37,9 @@ ollama run gemma4:e2b
 2. Click on the extension icon
 3. Hover over an image
 4. Click on `Glowing Monocle`
+
+
+# Dependencies
+
+- Marked https://marked.js.org/
+- DomPurify https://github.com/cure53/DOMPurify
