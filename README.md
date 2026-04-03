@@ -1,5 +1,5 @@
 # glowing-monocle
-A Chrome extension to analyse images in the browser
+A Chrome (and Brave) extension to analyse images in the browser
 
 It depends on a LLM api, by default the setup is considering a Ollama instance running locally (standard chat completion request).
 
@@ -15,14 +15,14 @@ set OLLAMA_ORIGINS=chrome-extension://*
 ollama serve
 ```
 
-# Verify that the Ollama instance is running by visiting http://localhost:11434/api/tags
+- Verify that the Ollama instance is running by visiting http://localhost:11434/api/tags
 
-A good vision model is https://ollama.com/library/gemma4    
+A good and small vision model is https://ollama.com/library/gemma4    
 
 You can install it with:
-
+```
 ollama run gemma4:e2b
-
+```
 
 # Install the extension
 
