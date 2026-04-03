@@ -1,0 +1,28 @@
+<div id="image-analyzer-overlay">
+  <div id="image-analyzer-modal" role="dialog" aria-modal="true"">
+    <button id="image-analyzer-close" aria-label="Close">×</button>
+    <h2>Glowing Monocle 🔎</h2>
+
+    <div id="image-analyzer-image-url"></div>
+
+    <div id="image-analyzer-toolbar">
+      <div id="image-analyzer-tabs">
+        <button type="button" id="ia-tab-formatted" class="ia-tab ia-tab-active">Formatted</button>
+        <button type="button" id="ia-tab-raw" class="ia-tab">Raw JSON</button>
+      </div>
+
+      <div id="image-analyzer-actions">
+        <button type="button" id="ia-copy-btn" class="ia-btn">Copy JSON</button>
+        <span id="ia-copy-status"></span>
+      </div>
+    </div>
+
+    <div id="image-analyzer-spinner" class="ia-hidden">
+      <div class="ia-spinner"></div>
+      <div>Analyzing image...</div>
+    </div>
+
+    <div id="image-analyzer-formatted" class="ia-panel ia-markdown"></div>
+    <pre id="image-analyzer-raw" class="ia-panel ia-hidden"></pre>
+  </div>
+</div>

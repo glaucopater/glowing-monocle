@@ -1,0 +1,145 @@
+#image-analyzer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+#image-analyzer-modal {
+  width: min(820px, calc(100vw - 32px));
+  max-height: 85vh;
+  overflow: auto;
+  background: white;
+  color: #111;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  position: relative;
+}
+
+#image-analyzer-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#image-analyzer-image-url {
+  font-size: 12px;
+  color: #555;
+  margin: 12px 0 16px;
+  word-break: break-all;
+}
+
+#image-analyzer-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+#image-analyzer-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.ia-tab,
+.ia-btn {
+  border: 1px solid #d0d0d0;
+  background: #f3f3f3;
+  color: #111;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.ia-tab-active {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+#image-analyzer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#ia-copy-status {
+  font-size: 13px;
+  color: #2e7d32;
+  min-width: 60px;
+}
+
+#image-analyzer-spinner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ia-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ddd;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: ia-spin 0.8s linear infinite;
+}
+
+.ia-hidden {
+  display: none !important;
+}
+
+.ia-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.ia-markdown {
+  line-height: 1.6;
+}
+
+.ia-markdown h1,
+.ia-markdown h2,
+.ia-markdown h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.ia-markdown p,
+.ia-markdown ul,
+.ia-markdown ol {
+  margin: 0.75em 0;
+}
+
+.ia-markdown code {
+  background: #ececec;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+#image-analyzer-raw {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@keyframes ia-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
