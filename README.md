@@ -2,8 +2,6 @@
 
 A Chromium extension (Manifest V3) that analyzes images in the browser using a local [Ollama](https://ollama.com/) chat API with vision support. Works in Chrome, Brave, and other Chromium-based browsers.
 
-Current extension version: **0.2.3** (see `manifest.json`).
-
 ## Features
 
 - **Image context menu**: right-click an image and choose **Glowing Monocle**.
