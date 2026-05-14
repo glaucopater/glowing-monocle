@@ -11,6 +11,7 @@
   let copyStatus = null;
   let tabFormatted = null;
   let tabRaw = null;
+  let versionEl = null;
 
   let currentRawJson = "";
   let currentFormatted = "";
@@ -201,6 +202,7 @@
     copyStatus = root.querySelector("#ia-copy-status");
     tabFormatted = root.querySelector("#ia-tab-formatted");
     tabRaw = root.querySelector("#ia-tab-raw");
+    versionEl = root.querySelector("#ia-extension-version");
   }
 
   function attachModalEvents(root) {
@@ -239,6 +241,15 @@
 
     cacheModalNodes(overlay);
     attachModalEvents(overlay);
+
+    if (versionEl) {
+      try {
+        versionEl.textContent = `Version ${chrome.runtime.getManifest().version}`;
+      } catch {
+        versionEl.textContent = "";
+      }
+    }
+
     htmlLoaded = true;
   }
 
